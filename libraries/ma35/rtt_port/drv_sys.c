@@ -25,7 +25,10 @@
 #define DEF_RAISING_CPU_FREQUENCY
 
 #if defined(BSP_USING_PMIC)
-    //#define DEF_RAISING_CPU_FREQUENCY_1GHZ
+    #if defined(SOC_SERIES_MA35D1)
+        //#define DEF_RAISING_CPU_FREQUENCY_1GHZ
+    #endif
+
     #define DEF_RAISING_CPU_VOLTAGE
 #endif
 
@@ -91,14 +94,14 @@ void nu_sys_check_register(S_NU_REG *psNuReg)
     {
         vu32 vc32RegValue = *((vu32 *)psNuReg->vu32RegAddr);
         vu32 vc32BMValue = vc32RegValue & psNuReg->vu32BitMask;
-        LOG_I("[%3s] %32s(0x%08x) %24s(0x%08x): 0x%08x(AndBitMask:0x%08x)\n",
-              (psNuReg->vu32Value == vc32BMValue) ? "Ok" : "!OK",
-              psNuReg->szVName,
-              psNuReg->vu32Value,
-              psNuReg->szRegName,
-              psNuReg->vu32RegAddr,
-              vc32RegValue,
-              vc32BMValue);
+        rt_kprintf("[%3s] %32s(0x%08x) %24s(0x%08x): 0x%08x(AndBitMask:0x%08x)\n",
+                   (psNuReg->vu32Value == vc32BMValue) ? "Ok" : "!OK",
+                   psNuReg->szVName,
+                   psNuReg->vu32Value,
+                   psNuReg->szRegName,
+                   psNuReg->vu32RegAddr,
+                   vc32RegValue,
+                   vc32BMValue);
         psNuReg++;
     }
 }
@@ -163,9 +166,64 @@ MSH_CMD_EXPORT(nu_tempsen_go, go tempsen);
 
 uint32_t nu_chipcfg_ddrsize(void)
 {
-    uint32_t u32ChipCfg = *((vu32 *)REG_SYS_CHIPCFG);
+    uint32_t u32DramSize = 0;
+    uint32_t u32ChipCfg = (*((vu32 *)REG_SYS_CHIPCFG) & 0xF0000) >> 16;
 
-    return ((u32ChipCfg & 0xF0000) != 0) ? (1 << ((u32ChipCfg & 0xF0000) >> 16)) << 20 : 0;
+    /*2023070401*/
+    if (u32ChipCfg != 0)
+    {
+#if 1
+        /* New rule */
+        /* 0000 = Non MCP. */
+        /* 0001 = 16 MB. */
+        /* 0010 = 32 MB. */
+        /* 0011 = 64 MB. */
+        /* 0100 = 128 MB. */
+        /* 0101 = 256 MB. */
+        /* 0110 = 512 MB. */
+        /* 0111 = 1024 MB. */
+        /* 1000 = 2048 MB. */
+        /* Others = Reserved. */
+
+        switch (u32ChipCfg)
+        {
+        /* if calculated DRAM size is bigger. */
+        /* We fix for the not backward-compatible rule. */
+        case 7:
+            u32ChipCfg = 4;
+            break;
+        case 8:
+            u32ChipCfg = 5;
+            break;
+        case 9:
+            u32ChipCfg = 6;
+            break;
+        default:
+            break;
+        }
+
+        u32DramSize = 1 << (3 + u32ChipCfg) << 20;
+#else
+        /* Old rule */
+        /* 0000 = Non MCP */
+        /* 0001 = 2 MB */
+        /* 0010 = 4 MB */
+        /* 0011 = 8 MB */
+        /* 0100 = 16 MB */
+        /* 0101 = 32 MB */
+        /* 0110 = 64 MB */
+        /* 0111 = 128 MB */
+        /* 1000 = 256 MB */
+        /* 1001 = 512 MB */
+        /* 1010 = 1024 MB */
+        /* 1011 = 2048 MB */
+        /* Others = Reserved */
+        u32DramSize = 1 << u32ChipCfg << 20;
+#endif
+
+    }
+
+    return u32DramSize;
 }
 
 static const char *szBootFromTypeName [] =
@@ -190,11 +248,11 @@ void nu_sys_dump(void)
 void nu_chipcfg_dump(void)
 {
     uint32_t u32ChipCfg = *((vu32 *)REG_SYS_CHIPCFG);
-    uint32_t u32ChipCfg_DDRSize = ((u32ChipCfg & 0xF0000) != 0) ? 1 << ((u32ChipCfg & 0xF0000) >> 16) : 0;
+    uint32_t u32ChipCfg_DDRSize = nu_chipcfg_ddrsize();
     uint32_t u32ChipCfg_DDRType = ((u32ChipCfg & 0x8000) >> 15);
 
     LOG_I("CHIPCFG: 0x%08x ", u32ChipCfg);
-    LOG_I("DDR SDRAM Size: %d MB", u32ChipCfg_DDRSize);
+    LOG_I("DDR SDRAM Size: %d MB", u32ChipCfg_DDRSize >> 20);
     LOG_I("MCP DDR TYPE: %s", u32ChipCfg_DDRSize ? (u32ChipCfg_DDRType ? "DDR2" : "DDR3/3L") : "Unknown");
 
     nu_sys_dump();
@@ -296,7 +354,8 @@ void nu_clock_raise(void)
 #if defined(DEF_RAISING_CPU_VOLTAGE)
         ma35d1_set_cpu_voltage(CLK_GetPLLClockFreq(SYSPLL), 0x60);  //1.26v
 #endif
-        CLK_SetPLLFreq(CAPLL, PLL_OPMODE_INTEGER, u32PllRefClk, 800000000ul);
+
+        CLK_SetPLLFreq(CAPLL, PLL_OPMODE_INTEGER, u32PllRefClk, BSP_CAPLL_FREQUENCY);
     }
 
     /* Waiting clock ready */
@@ -309,6 +368,7 @@ void nu_clock_raise(void)
 }
 
 #ifdef FINSH_USING_MSH
+    MSH_CMD_EXPORT(nu_chipcfg_dump, Dump chip configurations);
     MSH_CMD_EXPORT(nu_clock_dump, Dump all clocks);
     MSH_CMD_EXPORT(nu_clock_raise, Raise clock);
     MSH_CMD_EXPORT(nu_clock_isready, Check PLL clocks);

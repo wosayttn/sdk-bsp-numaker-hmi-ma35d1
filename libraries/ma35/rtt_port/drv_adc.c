@@ -124,8 +124,8 @@ static rt_err_t _nu_adc_init(rt_device_t dev)
 {
     nu_adc_t psNuAdc = (nu_adc_t)dev;
 
-    /* ADC Engine Clock is set to freq Khz */
-    CLK_SetModuleClock(psNuAdc->modid, 0, CLK_CLKDIV4_ADC(180));  // Set ADC clock rate to 9MHz
+    /* ADC Engine Clock is set to 1MHz. -> 180MHz / (2*(ADCDIV-1)) */
+    CLK_SetModuleClock(psNuAdc->modid, 0, CLK_CLKDIV4_ADC(180));
 
     /* Install interrupt service routine */
     rt_hw_interrupt_install(psNuAdc->irqn, nu_adc_isr, (void *)psNuAdc, psNuAdc->name);
@@ -275,7 +275,8 @@ rt_err_t nu_adc_touch_enable(rt_touch_t psRtTouch)
     nu_adc_cb sNuAdcCb;
     ADC_T  *adc = psNuAdc->base;
 
-    adc->CONF = 0x0;
+    /* Enable ADC to high speed mode */
+    adc->CONF = ADC_CONF_SPEED_Msk | ADC_CONF_REFSEL_Msk;
 
     rt_adc_enable((rt_adc_device_t)psNuAdc, 4);  //Channel number 4
     rt_adc_enable((rt_adc_device_t)psNuAdc, 5);  //Channel number 5
@@ -480,13 +481,18 @@ static rt_err_t _nu_adc_open(rt_device_t dev, rt_uint16_t oflag)
     CLK_EnableModuleClock(psNuAdc->modid);
 
     /* Reset the ADC IP */
-    SYS_ResetModule(psNuAdc->modid);
+    SYS_ResetModule(psNuAdc->rstidx);
 
     /* Enable ADC Power */
     ADC_POWER_ON(adc);
 
     /* Enable ADC to high speed mode */
     adc->CONF |= ADC_CONF_SPEED_Msk;
+
+    /* Use Internal VREF */
+    /* Note that the external VREF for the ADC is assigned to channel 0.
+       If the external VREF is to be used, channel 0 cannot be used as a normal input channel. */
+    adc->CONF |= ADC_CONF_REFSEL_Msk;
 
     /* Enable interrupt */
     rt_hw_interrupt_umask(psNuAdc->irqn);

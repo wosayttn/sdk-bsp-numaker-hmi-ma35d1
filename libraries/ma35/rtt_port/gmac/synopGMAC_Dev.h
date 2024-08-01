@@ -70,6 +70,7 @@ enum GMACPhyBase
 #else
     #define TRANSMIT_DESC_SIZE      4096   //Tx Descriptors needed in the Descriptor pool/queue
     #define RECEIVE_DESC_SIZE       8192  //Rx Descriptors needed in the Descriptor pool/queue
+
     #define MAX_ETHERNET_PAYLOAD    NORMAL_FRAME_PAYLOAD
 #endif
 

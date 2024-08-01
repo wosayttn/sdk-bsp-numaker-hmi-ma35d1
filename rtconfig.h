@@ -221,11 +221,11 @@
 #define RT_LWIP_TCP_SEG_NUM 8192
 #define RT_LWIP_TCP_SND_BUF 32768
 #define RT_LWIP_TCP_WND 16384
-#define RT_LWIP_TCPTHREAD_PRIORITY 8
+#define RT_LWIP_TCPTHREAD_PRIORITY 12
 #define RT_LWIP_TCPTHREAD_MBOX_SIZE 4096
 #define RT_LWIP_TCPTHREAD_STACKSIZE 4096
 #define LWIP_NO_TX_THREAD
-#define RT_LWIP_ETHTHREAD_PRIORITY 6
+#define RT_LWIP_ETHTHREAD_PRIORITY 10
 #define RT_LWIP_ETHTHREAD_STACKSIZE 4096
 #define RT_LWIP_ETHTHREAD_MBOX_SIZE 4096
 #define RT_LWIP_REASSEMBLY_FRAG
@@ -276,6 +276,12 @@
 
 
 /* CYW43012 WiFi */
+
+
+/* BL808 WiFi */
+
+
+/* CYW43439 WiFi */
 
 
 /* IoT Cloud */
@@ -334,6 +340,14 @@
 
 /* peripheral libraries and drivers */
 
+/* HAL & SDK Drivers */
+
+/* STM32 HAL & SDK Drivers */
+
+
+/* Kendryte SDK */
+
+
 /* sensors drivers */
 
 #define PKG_USING_MPU6XXX
@@ -342,9 +356,6 @@
 #define PKG_USING_MPU6XXX_GYRO
 
 /* touch drivers */
-
-
-/* Kendryte SDK */
 
 
 /* AI packages */
@@ -403,7 +414,9 @@
 
 /* On-chip Peripheral Drivers */
 
+#define SOC_FAMILY_NUMICRO
 #define SOC_SERIES_MA35D1
+#define BSP_CAPLL_FREQUENCY 800000000
 #define BSP_USING_SSPCC
 #define BSP_USING_SSMCC
 #define BSP_USING_UMCTL2
@@ -457,7 +470,7 @@
 #define BSP_USING_QSPI
 #define BSP_USING_QSPI0
 #define BSP_USING_DISP
-#define LCM_USING_FW070TFT_WSVGA
+#define LCD_USING_FW070TFT_WSVGA
 #define DISP_USING_LCD_IDX 0
 #define BSP_LCD_BPP 32
 #define BSP_LCD_WIDTH 1024
@@ -467,6 +480,7 @@
 #define BSP_USING_HWSEM0
 #define BSP_USING_WHC
 #define BSP_USING_WHC0
+#define BSP_USING_VDE
 #define BSP_USING_USBH
 #define BSP_USING_HSUSBH0
 #define BSP_USING_HSUSBH1
@@ -484,6 +498,7 @@
 
 #define BOARD_USING_LCM
 #define BOARD_USING_LCM_FW070TFT_WSVGA
+#define BOARD_USING_LCM_TOUCH
 #define BOARD_USING_ADCTOUCH
 
 /* Nuvoton Packages Config */

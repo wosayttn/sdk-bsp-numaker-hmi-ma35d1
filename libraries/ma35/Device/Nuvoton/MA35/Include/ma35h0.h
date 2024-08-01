@@ -404,7 +404,7 @@ typedef enum IRQn
 #define WHC0_BASE               (0)
 
 #define MCAN0_BASE              (0x403C0000U)
-#define MCAN1_BASE              (0)
+#define MCAN1_BASE              (0x403D0000U)
 #define MCAN2_BASE              (0)
 #define MCAN3_BASE              (0)
 #define CANFD0_BASE             MCAN0_BASE
@@ -473,7 +473,7 @@ typedef enum IRQn
 #define UART1_BASE              (0)
 #define UART2_BASE              (0)
 #define UART3_BASE              (0)
-#define UART4_BASE              (0)
+#define UART4_BASE              (0x40740000U)
 #define UART5_BASE              (0x40750000U)
 #define UART6_BASE              (0x40760000U)
 #define UART7_BASE              (0)

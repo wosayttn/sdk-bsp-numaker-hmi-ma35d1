@@ -26,9 +26,9 @@
 
 #include "synopGMAC_Host.h"
 
-#define DBG_ENABLE
-//#undef  DBG_ENABLE
-#define DBG_LEVEL  LOG_LVL_INFO
+//#define DBG_ENABLE
+#undef  DBG_ENABLE
+#define DBG_LEVEL  LOG_LVL_ASSERT
 #define DBG_SECTION_NAME  "drv_gmac"
 #define DBG_COLOR
 #include <rtdbg.h>
@@ -349,20 +349,20 @@ void nu_gmac_link_monitor(void *pvData)
         {
             gmacdev->LinkState = data;
             synopGMAC_mac_init(gmacdev);
-            LOG_I("Link is up in %s mode\n", (gmacdev->DuplexMode == FULLDUPLEX) ? "FULL DUPLEX" : "HALF DUPLEX");
+            LOG_I("Link is up in %s mode", (gmacdev->DuplexMode == FULLDUPLEX) ? "FULL DUPLEX" : "HALF DUPLEX");
             if (gmacdev->Speed == SPEED1000)
             {
-                LOG_I("Link is with 1000M Speed \r\n");
+                LOG_I("Link is with 1000M Speed");
                 synopGMAC_set_mode(gmacdev, 0);
             }
             if (gmacdev->Speed == SPEED100)
             {
-                LOG_I("Link is with 100M Speed \n");
+                LOG_I("Link is with 100M Speed");
                 synopGMAC_set_mode(gmacdev, 1);
             }
             if (gmacdev->Speed == SPEED10)
             {
-                LOG_I("Link is with 10M Speed \n");
+                LOG_I("Link is with 10M Speed");
                 synopGMAC_set_mode(gmacdev, 2);
             }
             eth_device_linkchange(&psNuGMAC->eth, RT_TRUE);
@@ -373,17 +373,11 @@ void nu_gmac_link_monitor(void *pvData)
     NU_GMAC_TRACE("%s: debug:%08x\n", psNuGMAC->name, synopGMACReadReg(gmacdev->MacBase, GmacDebug));
 }
 
-#ifndef CACHE_ON
-    __attribute__((section(".noncacheable"))) __attribute__((aligned(64))) DmaDesc sTXDescs[TRANSMIT_DESC_SIZE];
-    __attribute__((section(".noncacheable"))) __attribute__((aligned(64))) DmaDesc sRXDescs[RECEIVE_DESC_SIZE];
-#endif
-
 static void nu_memmgr_init(GMAC_MEMMGR_T *psMemMgr)
 {
     psMemMgr->u32TxDescSize = TRANSMIT_DESC_SIZE;
     psMemMgr->u32RxDescSize = RECEIVE_DESC_SIZE;
 
-#ifdef CACHE_ON
     psMemMgr->psTXDescs = (DmaDesc *) rt_malloc_align(sizeof(DmaDesc) * psMemMgr->u32TxDescSize, cache_line_size());
     RT_ASSERT(psMemMgr->psTXDescs);
     LOG_D("[%s] First TXDescAddr= %08x", __func__, psMemMgr->psTXDescs);
@@ -393,13 +387,6 @@ static void nu_memmgr_init(GMAC_MEMMGR_T *psMemMgr)
     RT_ASSERT(psMemMgr->psRXDescs);
     LOG_D("[%s] First RXDescAddr= %08x", __func__, psMemMgr->psRXDescs);
     invalidate_cpu_cache(psMemMgr->psRXDescs, sizeof(DmaDesc) * psMemMgr->u32RxDescSize);
-#else
-    psMemMgr->psTXDescs = (DmaDesc *) &sTXDescs[0];
-    LOG_D("[%s] First TXDescAddr= %08x", __func__, psMemMgr->psTXDescs);
-
-    psMemMgr->psRXDescs = (DmaDesc *) &sRXDescs[0];
-    LOG_D("[%s] First RXDescAddr= %08x", __func__, psMemMgr->psRXDescs);
-#endif
 
     psMemMgr->psTXFrames = (PKT_FRAME_T *) rt_malloc_align(sizeof(PKT_FRAME_T) * psMemMgr->u32TxDescSize, cache_line_size());
     RT_ASSERT(psMemMgr->psTXFrames);
@@ -681,7 +668,9 @@ struct pbuf *nu_gmac_rx(rt_device_t device)
                                        psPktFrame,
                                        PKT_FRAME_BUF_SIZE);
             if (pbuf == RT_NULL)
-                LOG_E("%s: failed to alloted %08x\n", psNuGMAC->name, pbuf);
+            {
+                LOG_E("%s: failed to alloced %08x\n", psNuGMAC->name, pbuf);
+            }
         }
         else
         {
@@ -812,7 +801,7 @@ int rt_hw_gmac_init(void)
 }
 INIT_DEVICE_EXPORT(rt_hw_gmac_init);
 
-#if 0
+#if 1
 /*
     Remeber src += lwipiperf_SRCS in components\net\lwip\lwip-*\SConscript
 */

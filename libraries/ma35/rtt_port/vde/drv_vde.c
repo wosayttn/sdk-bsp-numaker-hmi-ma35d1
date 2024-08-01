@@ -25,7 +25,11 @@
 
 #include "vc8000_lib.h"
 
-#define DEF_VDE_BUFFER_SIZE    0x4000000
+#if defined(SOC_SERIES_MA35D1)
+    #define DEF_VDE_BUFFER_SIZE    0x4000000
+#else
+    #define DEF_VDE_BUFFER_SIZE    0x1000000
+#endif
 
 static int rt_hw_vde_init(void)
 {

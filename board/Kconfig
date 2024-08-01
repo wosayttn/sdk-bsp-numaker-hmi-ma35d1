@@ -88,57 +88,67 @@ menu "Hardware Drivers Config"
                 prompt "Select LCD panel devices.(Over DISP)"
                     default BOARD_USING_LCM_FW070TFT_WSVGA
 
-                config BOARD_USING_LCM_FW070TFT_WVGA
-                    bool "NuDesign TFT-LCD7-WVGA"
-                    select BSP_USING_DISP
-                    select LCM_USING_FW070TFT
-                    help
-                        Choose this option if you use 7" 800x480x32b LCD panel.
-
                 config BOARD_USING_LCM_FW070TFT_WSVGA
                     bool "NuDesign TFT-LCD7-WSVGA"
                     select BSP_USING_DISP
-                    select LCM_USING_FW070TFT_WSVGA
+                    select LCD_USING_FW070TFT_WSVGA
                     help
                         Choose this option if you use 7" 1024x600x32b LCD panel.
 
-                config BOARD_USING_LCM_RGB888TOLVDS
-                    bool "NuDesign RGB888 to LVDS"
+                config BOARD_USING_LCM_FW070TFT_WVGA
+                    bool "NuDesign TFT-LCD7-WVGA"
                     select BSP_USING_DISP
-                    select LCM_USING_RGB2LVDS
+                    select LCD_USING_FW070TFT
                     help
-                        Choose this option if you use 10" 1920x1200x32b LCD panel.
+                        Choose this option if you use 7" 800x480x32b LCD panel.
+
+                config BOARD_USING_LCM_RGB_CONVERTER
+                    bool "RGB Converter"
+                    select BSP_USING_DISP
+                    select LCD_USING_CUSTOMER
+                    help
+                        Choose this option if you use RGB Converter in LCD board.
 
             endchoice
 
-            choice
-                prompt "Select Touch devices."
-                    default BOARD_USING_GT911
+            config BOARD_USING_VDDIO4_1_8V
+                bool "Set VDDIO4 to 1.8V"
+                default n
 
-                config BOARD_USING_GT911
-                    bool "GT911 TPC"
-                    select BSP_USING_I2C
-                    select BSP_USING_I2C0
-                    select NU_PKG_USING_TPC_GT911
-                    help
-                        Choose this option if you use GT911 external TSC touching function.
+            config BOARD_USING_LCM_TOUCH
+                bool "Use LCD touch panel."
+                default y
 
-                config BOARD_USING_ILI2511
-                    bool "ILI2511 TPC"
-                    select BSP_USING_I2C
-                    select BSP_USING_I2C0
-                    select NU_PKG_USING_TPC_ILI
-                    help
-                        Choose this option if you use ILI external TSC touching function.
+            if BOARD_USING_LCM_TOUCH
+                choice
+                    prompt "Select Touch devices."
+                        default BOARD_USING_GT911
 
-                config BOARD_USING_ADCTOUCH
-                    bool "ADC touching"
-                    select BSP_USING_ADC_TOUCH
-                    select NU_PKG_USING_ADC_TOUCH
-                    help
-                        Choose this option if you use internal ADC touching function.
+                    config BOARD_USING_GT911
+                        bool "GT911 TPC"
+                        select BSP_USING_I2C
+                        select BSP_USING_I2C5
+                        select NU_PKG_USING_TPC_GT911
+                        help
+                            Choose this option if you use GT911 external TSC touching function.
 
-            endchoice
+                    config BOARD_USING_ILI2511
+                        bool "ILI2511 TPC"
+                        select BSP_USING_I2C
+                        select BSP_USING_I2C5
+                        select NU_PKG_USING_TPC_ILI
+                        help
+                            Choose this option if you use ILI external TSC touching function.
+
+                    config BOARD_USING_ADCTOUCH
+                        bool "ADC touching"
+                        select BSP_USING_ADC_TOUCH
+                        select NU_PKG_USING_ADC_TOUCH
+                        help
+                            Choose this option if you use internal ADC touching function.
+
+                endchoice
+            endif
         endif
 
 

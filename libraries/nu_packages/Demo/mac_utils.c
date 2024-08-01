@@ -12,16 +12,21 @@
 
 #include <rtthread.h>
 
-#if defined(BSP_USING_EMAC) && defined(SOC_SERIES_NUC980)
+#if defined(BSP_USING_EMAC) && defined(ARCH_ARM_ARM9)
 
 #include <dfs_file.h>
 #include <unistd.h>
 #include <stdio.h>
 #include <sys/stat.h>
 #include <sys/statfs.h>
+#if defined(RT_HWCRYPTO_USING_RNG)
+    #include <hw_rng.h>
+#else
+    #include <stdlib.h>
+    #include <time.h>
+#endif
 
 #include "drv_emac.h"
-#include <hw_rng.h>
 
 #if !defined(DEF_IFACE_NAME)
     #define DEF_IFACE_NAME    "e0"
@@ -47,6 +52,8 @@ static int nu_mac_addr_restore(uint8_t *au8MacAddr)
     }
 
     close(fd);
+
+    rt_kprintf("[%s] read %s ok\n", __func__, PATH_MACADDR_FILE);
 
     return 0;
 
@@ -114,10 +121,19 @@ static int mac_change(void)
         uint32_t result = 0;
         uint8_t au8MacAddr[6] = {0x82, 0x06, 0x21, 0x94, 0x94, 0x94};
 
+#if !defined(RT_HWCRYPTO_USING_RNG)
+        srand(time(NULL));
+#endif
+
         /* OUI */
         for (i = 3; i < 6; i++)
         {
+#if defined(RT_HWCRYPTO_USING_RNG)
             au8MacAddr[i] = rt_hwcrypto_rng_update() & 0xff;
+#else
+
+            au8MacAddr[i] = rand() % 256;
+#endif
         }
 
         rt_kprintf("[%s] Random Mac address: %02X:%02X:%02X:%02X:%02X:%02X\n", \

@@ -462,8 +462,6 @@ void CLK_SetHCLK(uint32_t u32ClkSrc, uint32_t u32ClkDiv)
   */
 void CLK_SetModuleClock(uint32_t u32ModuleIdx, uint32_t u32ClkSrc, uint32_t u32ClkDiv)
 {
-    uint32_t u32sel = 0U, u32div = 0U;
-
     if (u32ModuleIdx == KPI_MODULE)
     {
         CLK->CLKDIV4 = (CLK->CLKDIV4 & ~(CLK_CLKDIV4_KPIDIV_Msk)) | u32ClkDiv;
@@ -475,8 +473,15 @@ void CLK_SetModuleClock(uint32_t u32ModuleIdx, uint32_t u32ClkSrc, uint32_t u32C
         CLK->CLKDIV4 = (CLK->CLKDIV4 & ~(CLK_CLKDIV4_ADCDIV_Msk)) | u32ClkDiv;
         CLK->APBCLK2 = (CLK->APBCLK2 & ~(CLK_APBCLK2_ADCCKEN_Msk)) | CLK_APBCLK2_ADCCKEN_Msk;
     }
+    else if (u32ModuleIdx == EADC0_MODULE)
+    {
+        CLK->CLKDIV4 = (CLK->CLKDIV4 & ~(CLK_CLKDIV4_EADCDIV_Msk)) | u32ClkDiv;
+        CLK->APBCLK2 = (CLK->APBCLK2 & ~(CLK_APBCLK2_EADCCKEN_Msk)) | CLK_APBCLK2_EADCCKEN_Msk;
+    }
     else
     {
+        uint32_t u32sel = 0U, u32div = 0U;
+
         if (MODULE_CLKDIV_Msk(u32ModuleIdx) != MODULE_NoMsk)
         {
             /* Get clock divider control register address */
@@ -663,7 +668,7 @@ void CLK_DisableXtalRC(uint32_t u32ClkMask)
   *             - \ref QEI1_MODULE
   *             - \ref QEI2_MODULE
   *             - \ref ADC_MODULE
-  *             - \ref EADC_MODULE
+  *             - \ref EADC0_MODULE
   * @return     None
   * @details    This function is used to enable module clock.
   */
@@ -797,7 +802,7 @@ void CLK_EnableModuleClock(uint32_t u32ModuleIdx)
   *             - \ref QEI1_MODULE
   *             - \ref QEI2_MODULE
   *             - \ref ADC_MODULE
-  *             - \ref EADC_MODULE
+  *             - \ref EADC0_MODULE
   * @return     None
   * @details    This function is used to disable module clock.
   */
@@ -1578,7 +1583,7 @@ uint64_t CLK_SetPLLFreq(uint32_t u32PllIdx, uint32_t u32OpMode, uint64_t PllSrcC
   *             - \ref QEI1_MODULE
   *             - \ref QEI2_MODULE
   *             - \ref ADC_MODULE
-  *             - \ref EADC_MODULE
+  *             - \ref EADC0_MODULE
   * @return     Selected module clock source setting
   * @details    This function get selected module clock source.
   */
@@ -1718,7 +1723,7 @@ uint32_t CLK_GetModuleClockSource(uint32_t u32ModuleIdx)
   *             - \ref QEI1_MODULE
   *             - \ref QEI2_MODULE
   *             - \ref ADC_MODULE
-  *             - \ref EADC_MODULE
+  *             - \ref EADC0_MODULE
   * @return     Selected module clock divider number setting
   * @details    This function get selected module clock divider number.
   */
@@ -1737,6 +1742,11 @@ uint32_t CLK_GetModuleClockDivider(uint32_t u32ModuleIdx)
         else if (u32ModuleIdx == ADC_MODULE)
         {
             u32div = (CLK->CLKDIV4 & CLK_CLKDIV4_ADCDIV_Msk) >> CLK_CLKDIV4_ADCDIV_Pos;
+            return u32div;
+        }
+        else if (u32ModuleIdx == EADC0_MODULE)
+        {
+            u32div = (CLK->CLKDIV4 & CLK_CLKDIV4_EADCDIV_Msk) >> CLK_CLKDIV4_EADCDIV_Pos;
             return u32div;
         }
         else

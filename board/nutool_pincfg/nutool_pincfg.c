@@ -13,7 +13,8 @@
 MCU:MA35D16A887C(BGA312)
 ********************/
 
-#include "ma35d1.h"
+#include "NuMicro.h"
+#include "rtconfig.h"
 
 void nutool_pincfg_init_adc0(void)
 {
@@ -85,7 +86,8 @@ void nutool_pincfg_init_epwm1(void)
     SYS->GPM_MFPH &= ~(SYS_GPM_MFPH_PM13MFP_Msk);
     SYS->GPM_MFPH |= (SYS_GPM_MFPH_PM13MFP_EPWM1_CH5);
 
-#if !defined(BOARD_USING_LCM_RGB888TOLVDS)
+#if !defined(BOARD_USING_LCM_RGB_CONVERTER)
+    /* For RGB to LVDS 1080p board */
     SYS->GPK_MFPL &= ~(SYS_GPK_MFPL_PK5MFP_Msk);
     SYS->GPK_MFPL |= (SYS_GPK_MFPL_PK5MFP_EPWM1_CH1);
 #endif
@@ -97,7 +99,8 @@ void nutool_pincfg_deinit_epwm1(void)
 {
     SYS->GPM_MFPH &= ~(SYS_GPM_MFPH_PM13MFP_Msk);
 
-#if !defined(BOARD_USING_LCM_RGB888TOLVDS)
+#if !defined(BOARD_USING_LCM_RGB_CONVERTER)
+    /* For RGB to LVDS 1080p board */
     SYS->GPK_MFPL &= ~(SYS_GPK_MFPL_PK5MFP_Msk);
 #endif
 
@@ -242,10 +245,10 @@ void nutool_pincfg_init_lcm(void)
     SYS->GPK_MFPL &= ~(SYS_GPK_MFPL_PK4MFP_Msk);
     SYS->GPK_MFPL |= (SYS_GPK_MFPL_PK4MFP_LCM_DEN);
 
-#if defined(BOARD_USING_LCM_RGB888TOLVDS)
-
+#if defined(BOARD_USING_VDDIO4_1_8V)
     /* Set 1.8v */
     GPIO_SetPowerMode(PG, BIT10, 0);
+#endif
 
     GPIO_SetPullCtl(PG, (BIT8 | BIT9 | BIT10), GPIO_PUSEL_DISABLE);
     GPIO_SetPullCtl(PK, (BIT4), GPIO_PUSEL_DISABLE);
@@ -275,8 +278,6 @@ void nutool_pincfg_init_lcm(void)
     GPIO_SetDrivingCtl(PH, (BIT0 | BIT1 | BIT2 | BIT3 | BIT4 | BIT5 | BIT6 | BIT7), DEF_LCM_DRIVING);
     GPIO_SetDrivingCtl(PC, (BIT12 | BIT13 | BIT14 | BIT15), DEF_LCM_DRIVING);
     GPIO_SetDrivingCtl(PH, (BIT12 | BIT13 | BIT14 | BIT15), DEF_LCM_DRIVING);
-
-#endif
 
     return;
 }
@@ -580,11 +581,21 @@ void nutool_pincfg_init(void)
     nutool_pincfg_init_epwm1();
     nutool_pincfg_init_hsusb0();
     nutool_pincfg_init_hsusbh();
+#if defined(BSP_USING_I2C1)
     nutool_pincfg_init_i2c1();
+#endif
+#if defined(BSP_USING_I2C2)
     nutool_pincfg_init_i2c2();
+#endif
+#if defined(BSP_USING_I2C3)
     nutool_pincfg_init_i2c3();
+#endif
+#if defined(BSP_USING_I2C4)
     nutool_pincfg_init_i2c4();
+#endif
+#if defined(BSP_USING_I2C5)
     nutool_pincfg_init_i2c5();
+#endif
     nutool_pincfg_init_i2s0();
     nutool_pincfg_init_lcm();
     nutool_pincfg_init_nand();
@@ -613,7 +624,9 @@ void nutool_pincfg_deinit(void)
     nutool_pincfg_deinit_epwm1();
     nutool_pincfg_deinit_hsusb0();
     nutool_pincfg_deinit_hsusbh();
+#if defined(BSP_USING_I2C1)
     nutool_pincfg_deinit_i2c1();
+#endif
     nutool_pincfg_deinit_i2c2();
     nutool_pincfg_deinit_i2c3();
     nutool_pincfg_deinit_i2c4();

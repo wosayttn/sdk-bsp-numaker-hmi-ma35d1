@@ -361,16 +361,12 @@ MSH_CMD_EXPORT(buzzer_test, Buzzer - Play ring tone);
 /* defined the LCM_BLEN pin: PK7 */
 #define LCM_BACKLIGHT_CTRL  NU_GET_PININDEX(NU_PK, 7)
 
-#if defined(BOARD_USING_LCM_RGB888TOLVDS)
-
-    #define LCM_DS90C189_RSTn   NU_GET_PININDEX(NU_PK, 5)
-
+#if defined(BOARD_USING_LCM_RGB_CONVERTER)
+    /* For RGB to LVDS 1080p board */
+    #define LCM_DS90C189_PDB   NU_GET_PININDEX(NU_PK, 5)
 #else
-
     #define EPWM_DEV_NAME       "epwm1"
-
     #define LCM_PWM_CHANNEL      (1)
-
 #endif
 
 void nu_lcd_backlight_on(void)
@@ -391,12 +387,6 @@ void nu_lcd_backlight_on(void)
 
     rt_pin_mode(LCM_BACKLIGHT_CTRL, PIN_MODE_OUTPUT);
     rt_pin_write(LCM_BACKLIGHT_CTRL, PIN_HIGH);
-
-#if defined(BOARD_USING_LCM_RGB888TOLVDS)
-    rt_pin_mode(LCM_DS90C189_RSTn, PIN_MODE_OUTPUT);
-    rt_pin_write(LCM_DS90C189_RSTn, PIN_HIGH);
-#endif
-
 }
 
 void nu_lcd_backlight_off(void)
@@ -416,12 +406,6 @@ void nu_lcd_backlight_off(void)
 
     rt_pin_mode(LCM_BACKLIGHT_CTRL, PIN_MODE_OUTPUT);
     rt_pin_write(LCM_BACKLIGHT_CTRL, PIN_LOW);
-
-#if defined(BOARD_USING_LCM_RGB888TOLVDS)
-    rt_pin_mode(LCM_DS90C189_RSTn, PIN_MODE_OUTPUT);
-    rt_pin_write(LCM_DS90C189_RSTn, PIN_LOW);
-#endif
-
 }
 
 int rt_hw_lcm_port(void)
@@ -434,9 +418,13 @@ int rt_hw_lcm_port(void)
         rtgui_graphic_set_device(lcm_vpost);
     }
 #endif
-#if defined(BOARD_USING_LCM_RGB888TOLVDS)
-    nu_lcd_backlight_on();
+
+#if defined(BOARD_USING_LCM_RGB_CONVERTER)
+    /* For RGB to LVDS 1080p board, Device Active (enabled) */
+    rt_pin_mode(LCM_DS90C189_PDB, PIN_MODE_OUTPUT);
+    rt_pin_write(LCM_DS90C189_PDB, PIN_HIGH);
 #endif
+
     return 0;
 }
 INIT_COMPONENT_EXPORT(rt_hw_lcm_port);
