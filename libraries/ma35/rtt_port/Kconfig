@@ -6,6 +6,7 @@ config SOC_FAMILY_NUMICRO
         select SOC_FAMILY_NUMICRO
         select RT_USING_COMPONENTS_INIT
         select RT_USING_USER_MAIN
+        select RT_USING_CACHE
         default y
 
     config BSP_CAPLL_FREQUENCY
@@ -1092,9 +1093,6 @@ config SOC_FAMILY_NUMICRO
 
                 config LCD_USING_FW070TFT_WVGA
                     bool "eDispLcd_800x480(800x480-RGB888)"
-
-                config LCD_USING_XVGA
-                    bool "eDispLcd_1024x768(1024x768-RGB888)"
 
                 config LCD_USING_CUSTOMER
                     bool "Customized"

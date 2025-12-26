@@ -39,7 +39,7 @@
     #define MOUNT_POINT_RAMDISK0 "/"
 #endif
 
-#if defined(BOARD_USING_STORAGE_SPIFLASH)
+#if defined(BOARD_USING_QSPI_FLASH)
     #include "fal_cfg.h"
     #define MOUNT_POINT_SPIFLASH0      "/mnt/"PARTITION_NAME_SF
 #endif
@@ -56,7 +56,7 @@ const void   *data;
 
 const struct dfs_mount_tbl mount_table[] =
 {
-#if defined(BOARD_USING_STORAGE_SPIFLASH)
+#if defined(BOARD_USING_QSPI_FLASH)
     { PARTITION_NAME_SF, MOUNT_POINT_SPIFLASH0, "elm", 0, RT_NULL },
 #endif
 
@@ -259,7 +259,7 @@ int filesystem_init(void)
             mkdir_p("/mnt/nfi", 0x777);
 #endif
 
-#if defined(BOARD_USING_STORAGE_SPIFLASH)
+#if defined(BOARD_USING_QSPI_FLASH)
             mkdir_p(MOUNT_POINT_SPIFLASH0, 0x777);
 #endif
 
@@ -305,7 +305,7 @@ int filesystem_init(void)
     }
 #endif
 
-#if defined(BOARD_USING_STORAGE_SPIFLASH)
+#if defined(BOARD_USING_QSPI_FLASH)
     {
         struct rt_device *psNorFlash = fal_blk_device_create(PARTITION_NAME_SF);
         if (!psNorFlash)

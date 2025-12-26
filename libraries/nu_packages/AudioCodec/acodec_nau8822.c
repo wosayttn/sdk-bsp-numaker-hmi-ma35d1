@@ -103,7 +103,7 @@ static int I2C_WriteNAU8822(uint8_t u8addr, uint16_t u16data)
 
     if (g_I2cBusDev && rt_i2c_transfer(g_I2cBusDev, &msg, 1) != 1)
     {
-        rt_kprintf("[Failed] addr=%x, data=%d\n", u8addr, u16data);
+        rt_kprintf("[Failed] addr=%d, data=%d\n", u8addr, u16data);
         return -RT_ERROR;
     }
 

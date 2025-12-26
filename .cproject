@@ -61,7 +61,6 @@
               <tool commandLinePattern="${COMMAND} ${FLAGS} -c ${OUTPUT_FLAG} ${OUTPUT_PREFIX}${OUTPUT} ${INPUTS}" id="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.1570350559" name="GNU ARM Cross C Compiler" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler">
                 <option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.include.paths.634882052" name="Include paths (-I)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.include.paths" useByScannerDiscovery="true">
                   <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//.}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//applications/lvgl}&quot;" />
                   <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//applications}&quot;" />
                   <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//board/nutool_pincfg}&quot;" />
                   <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//board}&quot;" />
@@ -73,76 +72,131 @@
                   <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//libraries/ma35/rtt_port}&quot;" />
                   <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//libraries/nu_packages/ADC_TOUCH}&quot;" />
                   <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//libraries/nu_packages/AudioCodec}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//libraries/nu_packages/CMSIS/Core/Include}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//libraries/nu_packages/Demo/multimedia}&quot;" />
                   <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//libraries/nu_packages/Demo}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//libraries/nu_packages/LV_PORT}&quot;" />
                   <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//libraries/nu_packages/NuUtils/inc}&quot;" />
                   <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//libraries/nu_packages/NuWriter}&quot;" />
                   <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//libraries/nu_packages/TPC}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/demos/benchmark}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/demos/keypad_encoder}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/demos/music/assets}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/demos/music}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/demos/stress}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/demos/widgets}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/demos}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/env_support/rt-thread}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/core}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/draw/arm2d}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/draw/nxp/pxp}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/draw/nxp/vglite}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/draw/sdl}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/draw/stm32_dma2d}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/draw/swm341_dma2d}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/draw/sw}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/draw}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/layouts/flex}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/layouts/grid}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/layouts}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/libs/bmp}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/libs/ffmpeg}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/libs/freetype}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/libs/fsdrv}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/libs/gif}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/libs/png}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/libs/qrcode}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/libs/rlottie}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/libs/sjpg}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/libs}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/others/fragment}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/others/gridnav}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/others/ime}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/others/imgfont}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/others/monkey}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/others/msg}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/others/snapshot}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/others}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/themes/basic}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/themes/default}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/themes/mono}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/themes}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/widgets/animimg}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/widgets/calendar}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/widgets/chart}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/widgets/colorwheel}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/widgets/imgbtn}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/widgets/keyboard}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/widgets/led}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/widgets/list}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/widgets/menu}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/widgets/meter}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/widgets/msgbox}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/widgets/span}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/widgets/spinbox}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/widgets/spinner}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/widgets/tabview}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/widgets/tileview}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/widgets/win}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/widgets}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/font}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/hal}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/misc}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/widgets}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/demos/benchmark}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/demos/flex_layout}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/demos/keypad_encoder}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/demos/multilang}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/demos/music/assets}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/demos/music}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/demos/render}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/demos/scroll}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/demos/stress}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/demos/transform}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/demos/vector_graphic}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/demos/widgets}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/demos}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/env_support/rt-thread}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/core}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/display}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/draw/nxp/pxp}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/draw/nxp/vglite}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/draw/renesas/dave2d}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/draw/sdl}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/draw/sw/arm2d}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/draw/sw/blend/arm2d}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/draw/sw/blend/helium}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/draw/sw/blend/neon}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/draw/sw/blend}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/draw/sw}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/draw/vg_lite}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/draw}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/drivers/display/drm}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/drivers/display/fb}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/drivers/display/ili9341}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/drivers/display/lcd}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/drivers/display/st7735}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/drivers/display/st7789}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/drivers/display/st7796}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/drivers/display/tft_espi}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/drivers/evdev}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/drivers/libinput}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/drivers/nuttx}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/drivers/sdl}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/drivers/windows}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/drivers/x11}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/drivers}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/font}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/indev}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/layouts/flex}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/layouts/grid}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/layouts}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/libs/barcode}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/libs/bin_decoder}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/libs/bmp}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/libs/ffmpeg}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/libs/freetype}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/libs/fsdrv}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/libs/gif}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/libs/libjpeg_turbo}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/libs/libpng}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/libs/lodepng}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/libs/lz4}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/libs/qrcode}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/libs/rle}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/libs/rlottie}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/libs/thorvg}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/libs/tiny_ttf}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/libs/tjpgd}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/misc/cache}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/misc}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/osal}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/others/file_explorer}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/others/fragment}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/others/gridnav}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/others/ime}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/others/imgfont}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/others/monkey}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/others/observer}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/others/snapshot}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/others/sysmon}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/others/vg_lite_tvg}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/stdlib/builtin}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/stdlib}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/themes/default}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/themes/mono}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/themes/simple}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/themes}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/tick}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/widgets/animimage}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/widgets/arc}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/widgets/bar}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/widgets/buttonmatrix}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/widgets/button}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/widgets/calendar}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/widgets/canvas}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/widgets/chart}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/widgets/checkbox}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/widgets/dropdown}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/widgets/imagebutton}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/widgets/image}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/widgets/keyboard}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/widgets/label}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/widgets/led}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/widgets/line}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/widgets/list}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/widgets/menu}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/widgets/msgbox}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/widgets/objx_templ}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/widgets/roller}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/widgets/scale}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/widgets/slider}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/widgets/span}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/widgets/spinbox}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/widgets/spinner}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/widgets/switch}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/widgets/table}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/widgets/tabview}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/widgets/textarea}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/widgets/tileview}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/widgets/win}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src}&quot;" />
                   <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/mpu6xxx-latest/inc}&quot;" />
                   <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/optparse-latest}&quot;" />
                   <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/ramdisk-latest/inc}&quot;" />
@@ -260,7 +314,6 @@
                 <option id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.compiler.defs.704468062" name="Defined symbols (-D)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.compiler.defs" useByScannerDiscovery="true" />
                 <option id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.compiler.include.paths.302877723" name="Include paths (-I)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.compiler.include.paths" useByScannerDiscovery="true">
                   <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//.}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//applications/lvgl}&quot;" />
                   <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//applications}&quot;" />
                   <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//board/nutool_pincfg}&quot;" />
                   <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//board}&quot;" />
@@ -272,76 +325,131 @@
                   <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//libraries/ma35/rtt_port}&quot;" />
                   <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//libraries/nu_packages/ADC_TOUCH}&quot;" />
                   <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//libraries/nu_packages/AudioCodec}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//libraries/nu_packages/CMSIS/Core/Include}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//libraries/nu_packages/Demo/multimedia}&quot;" />
                   <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//libraries/nu_packages/Demo}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//libraries/nu_packages/LV_PORT}&quot;" />
                   <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//libraries/nu_packages/NuUtils/inc}&quot;" />
                   <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//libraries/nu_packages/NuWriter}&quot;" />
                   <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//libraries/nu_packages/TPC}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/demos/benchmark}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/demos/keypad_encoder}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/demos/music/assets}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/demos/music}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/demos/stress}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/demos/widgets}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/demos}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/env_support/rt-thread}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/core}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/draw/arm2d}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/draw/nxp/pxp}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/draw/nxp/vglite}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/draw/sdl}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/draw/stm32_dma2d}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/draw/swm341_dma2d}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/draw/sw}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/draw}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/layouts/flex}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/layouts/grid}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/layouts}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/libs/bmp}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/libs/ffmpeg}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/libs/freetype}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/libs/fsdrv}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/libs/gif}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/libs/png}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/libs/qrcode}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/libs/rlottie}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/libs/sjpg}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/libs}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/others/fragment}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/others/gridnav}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/others/ime}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/others/imgfont}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/others/monkey}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/others/msg}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/others/snapshot}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/others}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/themes/basic}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/themes/default}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/themes/mono}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/themes}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/widgets/animimg}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/widgets/calendar}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/widgets/chart}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/widgets/colorwheel}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/widgets/imgbtn}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/widgets/keyboard}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/widgets/led}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/widgets/list}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/widgets/menu}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/widgets/meter}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/widgets/msgbox}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/widgets/span}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/widgets/spinbox}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/widgets/spinner}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/widgets/tabview}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/widgets/tileview}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/widgets/win}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra/widgets}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/extra}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/font}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/hal}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/misc}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src/widgets}&quot;" />
-                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v8.3.5/src}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/demos/benchmark}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/demos/flex_layout}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/demos/keypad_encoder}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/demos/multilang}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/demos/music/assets}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/demos/music}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/demos/render}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/demos/scroll}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/demos/stress}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/demos/transform}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/demos/vector_graphic}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/demos/widgets}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/demos}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/env_support/rt-thread}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/core}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/display}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/draw/nxp/pxp}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/draw/nxp/vglite}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/draw/renesas/dave2d}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/draw/sdl}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/draw/sw/arm2d}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/draw/sw/blend/arm2d}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/draw/sw/blend/helium}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/draw/sw/blend/neon}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/draw/sw/blend}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/draw/sw}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/draw/vg_lite}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/draw}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/drivers/display/drm}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/drivers/display/fb}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/drivers/display/ili9341}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/drivers/display/lcd}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/drivers/display/st7735}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/drivers/display/st7789}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/drivers/display/st7796}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/drivers/display/tft_espi}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/drivers/evdev}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/drivers/libinput}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/drivers/nuttx}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/drivers/sdl}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/drivers/windows}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/drivers/x11}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/drivers}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/font}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/indev}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/layouts/flex}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/layouts/grid}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/layouts}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/libs/barcode}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/libs/bin_decoder}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/libs/bmp}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/libs/ffmpeg}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/libs/freetype}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/libs/fsdrv}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/libs/gif}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/libs/libjpeg_turbo}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/libs/libpng}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/libs/lodepng}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/libs/lz4}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/libs/qrcode}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/libs/rle}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/libs/rlottie}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/libs/thorvg}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/libs/tiny_ttf}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/libs/tjpgd}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/misc/cache}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/misc}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/osal}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/others/file_explorer}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/others/fragment}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/others/gridnav}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/others/ime}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/others/imgfont}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/others/monkey}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/others/observer}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/others/snapshot}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/others/sysmon}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/others/vg_lite_tvg}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/stdlib/builtin}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/stdlib}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/themes/default}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/themes/mono}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/themes/simple}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/themes}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/tick}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/widgets/animimage}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/widgets/arc}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/widgets/bar}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/widgets/buttonmatrix}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/widgets/button}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/widgets/calendar}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/widgets/canvas}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/widgets/chart}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/widgets/checkbox}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/widgets/dropdown}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/widgets/imagebutton}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/widgets/image}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/widgets/keyboard}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/widgets/label}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/widgets/led}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/widgets/line}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/widgets/list}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/widgets/menu}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/widgets/msgbox}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/widgets/objx_templ}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/widgets/roller}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/widgets/scale}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/widgets/slider}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/widgets/span}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/widgets/spinbox}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/widgets/spinner}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/widgets/switch}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/widgets/table}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/widgets/tabview}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/widgets/textarea}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/widgets/tileview}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src/widgets/win}&quot;" />
+                  <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/LVGL-v9.1.0/src}&quot;" />
                   <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/mpu6xxx-latest/inc}&quot;" />
                   <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/optparse-latest}&quot;" />
                   <listOptionValue builtIn="false" value="&quot;${workspace_loc://${ProjName}//packages/ramdisk-latest/inc}&quot;" />
@@ -395,7 +503,7 @@
             </toolChain>
           </folderInfo>
           <sourceEntries>
-            <entry excluding="//libraries/ma35/Device/Nuvoton/MA35/Source/ARM|//libraries/ma35/Device/Nuvoton/MA35/Source/GCC|//libraries/ma35/Device/Nuvoton/MA35/Source/IAR|//libraries/ma35/libcpu|//libraries/ma35/rtt_port/cherryusb|//libraries/ma35/rtt_port/nfi|//libraries/ma35/rtt_port/vde/_VC8000Lib|//libraries/nu_packages/AudioCodec/acodec_nau88l25.c|//libraries/nu_packages/BMX055|//libraries/nu_packages/CCAP_Sensors|//libraries/nu_packages/CherryUSB|//libraries/nu_packages/DA9062|//libraries/nu_packages/DISPLib|//libraries/nu_packages/FSA506|//libraries/nu_packages/ILI9341|//libraries/nu_packages/LT7381|//libraries/nu_packages/MAX31875|//libraries/nu_packages/NCT7717U|//libraries/nu_packages/RV3032C7|//libraries/nu_packages/SLCD|//libraries/nu_packages/SPINAND|//libraries/nu_packages/SSD1963|//libraries/nu_packages/TPC|//libraries/nu_packages/_GC520L|//libraries/nu_packages/_VGLITE|//packages/LVGL-v8.3.5/env_support/rt-thread/squareline|//packages/LVGL-v8.3.5/examples|//packages/LVGL-v8.3.5/tests|//packages/mpu6xxx-latest/samples|//packages/optparse-latest/example|//rt-thread/components/dfs/filesystems/nfs|//rt-thread/components/dfs/filesystems/ramfs|//rt-thread/components/dfs/filesystems/romfs|//rt-thread/components/dfs/filesystems/skeleton|//rt-thread/components/drivers/can|//rt-thread/components/drivers/cputime|//rt-thread/components/drivers/hwcrypto|//rt-thread/components/drivers/hwtimer|//rt-thread/components/drivers/misc/dac.c|//rt-thread/components/drivers/misc/pulse_encoder.c|//rt-thread/components/drivers/misc/rt_inputcapture.c|//rt-thread/components/drivers/mtd/mtd_nor.c|//rt-thread/components/drivers/phy|//rt-thread/components/drivers/pm|//rt-thread/components/drivers/rtc/alarm.c|//rt-thread/components/drivers/rtc/soft_rtc.c|//rt-thread/components/drivers/sensors/sensor_cmd.c|//rt-thread/components/drivers/serial/serial_v2.c|//rt-thread/components/drivers/spi/enc28j60.c|//rt-thread/components/drivers/spi/sfud|//rt-thread/components/drivers/spi/spi-bit-ops.c|//rt-thread/components/drivers/spi/spi_flash_sfud.c|//rt-thread/components/drivers/spi/spi_msd.c|//rt-thread/components/drivers/spi/spi_wifi_rw009.c|//rt-thread/components/drivers/usb/usbdevice|//rt-thread/components/drivers/usb/usbhost/class/adk.c|//rt-thread/components/drivers/usb/usbhost/class/hid.c|//rt-thread/components/drivers/usb/usbhost/class/ukbd.c|//rt-thread/components/drivers/usb/usbhost/class/umouse.c|//rt-thread/components/drivers/watchdog|//rt-thread/components/drivers/wlan|//rt-thread/components/fal|//rt-thread/components/libc/compilers/armlibc|//rt-thread/components/libc/compilers/dlib|//rt-thread/components/libc/compilers/musl|//rt-thread/components/libc/cplusplus|//rt-thread/components/libc/posix/io/aio|//rt-thread/components/libc/posix/io/mman|//rt-thread/components/libc/posix/io/stdio|//rt-thread/components/libc/posix/io/termios|//rt-thread/components/libc/posix/signal|//rt-thread/components/lwp|//rt-thread/components/net/at|//rt-thread/components/net/lwip-dhcpd|//rt-thread/components/net/lwip-nat|//rt-thread/components/net/lwip/lwip-1.4.1|//rt-thread/components/net/lwip/lwip-2.0.3|//rt-thread/components/net/lwip/lwip-2.1.2/doc|//rt-thread/components/net/lwip/lwip-2.1.2/src/apps/http|//rt-thread/components/net/lwip/lwip-2.1.2/src/apps/mdns|//rt-thread/components/net/lwip/lwip-2.1.2/src/apps/mqtt|//rt-thread/components/net/lwip/lwip-2.1.2/src/apps/netbiosns|//rt-thread/components/net/lwip/lwip-2.1.2/src/apps/smtp|//rt-thread/components/net/lwip/lwip-2.1.2/src/apps/snmp/snmp_asn1.c|//rt-thread/components/net/lwip/lwip-2.1.2/src/apps/snmp/snmp_core.c|//rt-thread/components/net/lwip/lwip-2.1.2/src/apps/snmp/snmp_mib2.c|//rt-thread/components/net/lwip/lwip-2.1.2/src/apps/snmp/snmp_mib2_icmp.c|//rt-thread/components/net/lwip/lwip-2.1.2/src/apps/snmp/snmp_mib2_interfaces.c|//rt-thread/components/net/lwip/lwip-2.1.2/src/apps/snmp/snmp_mib2_ip.c|//rt-thread/components/net/lwip/lwip-2.1.2/src/apps/snmp/snmp_mib2_snmp.c|//rt-thread/components/net/lwip/lwip-2.1.2/src/apps/snmp/snmp_mib2_system.c|//rt-thread/components/net/lwip/lwip-2.1.2/src/apps/snmp/snmp_mib2_tcp.c|//rt-thread/components/net/lwip/lwip-2.1.2/src/apps/snmp/snmp_mib2_udp.c|//rt-thread/components/net/lwip/lwip-2.1.2/src/apps/snmp/snmp_msg.c|//rt-thread/components/net/lwip/lwip-2.1.2/src/apps/snmp/snmp_netconn.c|//rt-thread/components/net/lwip/lwip-2.1.2/src/apps/snmp/snmp_pbuf_stream.c|//rt-thread/components/net/lwip/lwip-2.1.2/src/apps/snmp/snmp_raw.c|//rt-thread/components/net/lwip/lwip-2.1.2/src/apps/snmp/snmp_scalar.c|//rt-thread/components/net/lwip/lwip-2.1.2/src/apps/snmp/snmp_snmpv2_framework.c|//rt-thread/components/net/lwip/lwip-2.1.2/src/apps/snmp/snmp_snmpv2_usm.c|//rt-thread/components/net/lwip/lwip-2.1.2/src/apps/snmp/snmp_table.c|//rt-thread/components/net/lwip/lwip-2.1.2/src/apps/snmp/snmp_threadsync.c|//rt-thread/components/net/lwip/lwip-2.1.2/src/apps/snmp/snmp_traps.c|//rt-thread/components/net/lwip/lwip-2.1.2/src/apps/snmp/snmpv3.c|//rt-thread/components/net/lwip/lwip-2.1.2/src/apps/sntp|//rt-thread/components/net/lwip/lwip-2.1.2/src/apps/tftp|//rt-thread/components/net/lwip/lwip-2.1.2/src/core/ipv6|//rt-thread/components/net/lwip/lwip-2.1.2/src/core/mem.c|//rt-thread/components/net/lwip/lwip-2.1.2/src/netif/bridgeif.c|//rt-thread/components/net/lwip/lwip-2.1.2/src/netif/bridgeif_fdb.c|//rt-thread/components/net/lwip/lwip-2.1.2/src/netif/lowpan6_ble.c|//rt-thread/components/net/lwip/lwip-2.1.2/src/netif/lowpan6_common.c|//rt-thread/components/net/lwip/lwip-2.1.2/src/netif/ppp|//rt-thread/components/net/lwip/lwip-2.1.2/src/netif/slipif.c|//rt-thread/components/net/lwip/lwip-2.1.2/src/netif/zepif.c|//rt-thread/components/net/lwip/lwip-2.1.2/test|//rt-thread/components/net/sal/impl/af_inet_at.c|//rt-thread/components/net/sal/impl/proto_mbedtls.c|//rt-thread/components/utilities/rt-link|//rt-thread/components/utilities/ulog/backend/file_be.c|//rt-thread/components/utilities/ulog/syslog|//rt-thread/components/utilities/var_export|//rt-thread/components/utilities/ymodem|//rt-thread/components/utilities/zmodem|//rt-thread/components/vbus|//rt-thread/components/vmm|//rt-thread/libcpu/arm/AT91SAM7S|//rt-thread/libcpu/arm/AT91SAM7X|//rt-thread/libcpu/arm/am335x|//rt-thread/libcpu/arm/arm926|//rt-thread/libcpu/arm/armv6|//rt-thread/libcpu/arm/common/divsi3.S|//rt-thread/libcpu/arm/cortex-a/gicv3.c|//rt-thread/libcpu/arm/cortex-m0|//rt-thread/libcpu/arm/cortex-m23|//rt-thread/libcpu/arm/cortex-m3|//rt-thread/libcpu/arm/cortex-m33|//rt-thread/libcpu/arm/cortex-m4|//rt-thread/libcpu/arm/cortex-m55|//rt-thread/libcpu/arm/cortex-m7|//rt-thread/libcpu/arm/cortex-m85|//rt-thread/libcpu/arm/cortex-r4|//rt-thread/libcpu/arm/dm36x|//rt-thread/libcpu/arm/lpc214x|//rt-thread/libcpu/arm/lpc24xx|//rt-thread/libcpu/arm/realview-a8-vmm|//rt-thread/libcpu/arm/s3c24x0|//rt-thread/libcpu/arm/s3c44b0|//rt-thread/libcpu/arm/sep4020|//rt-thread/libcpu/arm/zynqmp-r5|//rt-thread/src/signal.c|//rt-thread/src/slab.c|//rt-thread/tools" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="" />
+            <entry excluding="//libraries/ma35/Device/Nuvoton/MA35/Source/ARM|//libraries/ma35/Device/Nuvoton/MA35/Source/GCC|//libraries/ma35/Device/Nuvoton/MA35/Source/IAR|//libraries/ma35/libcpu|//libraries/ma35/rtt_port/cherryusb|//libraries/ma35/rtt_port/nfi|//libraries/ma35/rtt_port/vde/_VC8000Lib|//libraries/nu_packages/AudioCodec/acodec_nau88l25.c|//libraries/nu_packages/BMX055|//libraries/nu_packages/CCAP_Sensors|//libraries/nu_packages/DA9062|//libraries/nu_packages/DISPLib|//libraries/nu_packages/FSA506|//libraries/nu_packages/ILI9341|//libraries/nu_packages/LIS3DH|//libraries/nu_packages/LPS22HH|//libraries/nu_packages/LT7381|//libraries/nu_packages/LV_PORT/draw_2dge|//libraries/nu_packages/LV_PORT/draw_gdma|//libraries/nu_packages/LV_PORT/lv_gpu_n9h30_2dge.c|//libraries/nu_packages/LV_PORT/lv_port_disp.c|//libraries/nu_packages/LV_PORT/lv_port_disp_n9h30.c|//libraries/nu_packages/MAX31875|//libraries/nu_packages/NCT7717U|//libraries/nu_packages/QSPINOR|//libraries/nu_packages/RV3032C7|//libraries/nu_packages/SLCD|//libraries/nu_packages/SPINAND|//libraries/nu_packages/SSD1963|//libraries/nu_packages/TMP112|//libraries/nu_packages/TPC|//libraries/nu_packages/_GC520L|//libraries/nu_packages/_VGLITE|//packages/LVGL-v9.1.0/demos/lv_demos.c|//packages/LVGL-v9.1.0/env_support/pikascript|//packages/LVGL-v9.1.0/env_support/rt-thread/squareline|//packages/LVGL-v9.1.0/examples|//packages/LVGL-v9.1.0/src/draw/sw/blend/helium|//packages/LVGL-v9.1.0/src/draw/sw/blend/neon|//packages/LVGL-v9.1.0/src/drivers/display/tft_espi|//packages/LVGL-v9.1.0/src/libs/thorvg|//packages/LVGL-v9.1.0/src/others/vg_lite_tvg/vg_lite_tvg.cpp|//packages/LVGL-v9.1.0/tests|//packages/mpu6xxx-latest/samples|//packages/mpu6xxx-latest/src/sensor_inven_mpu6xxx.c|//packages/optparse-latest/example|//rt-thread/components/dfs/filesystems/nfs|//rt-thread/components/dfs/filesystems/ramfs|//rt-thread/components/dfs/filesystems/romfs|//rt-thread/components/dfs/filesystems/skeleton|//rt-thread/components/drivers/can|//rt-thread/components/drivers/cputime|//rt-thread/components/drivers/hwcrypto|//rt-thread/components/drivers/hwtimer|//rt-thread/components/drivers/misc/dac.c|//rt-thread/components/drivers/misc/pulse_encoder.c|//rt-thread/components/drivers/misc/rt_inputcapture.c|//rt-thread/components/drivers/mtd/mtd_nor.c|//rt-thread/components/drivers/phy|//rt-thread/components/drivers/pm|//rt-thread/components/drivers/rtc/alarm.c|//rt-thread/components/drivers/rtc/soft_rtc.c|//rt-thread/components/drivers/sensors/sensor_cmd.c|//rt-thread/components/drivers/serial/serial_v2.c|//rt-thread/components/drivers/spi/enc28j60.c|//rt-thread/components/drivers/spi/sfud|//rt-thread/components/drivers/spi/spi-bit-ops.c|//rt-thread/components/drivers/spi/spi_flash_sfud.c|//rt-thread/components/drivers/spi/spi_msd.c|//rt-thread/components/drivers/spi/spi_wifi_rw009.c|//rt-thread/components/drivers/usb/usbdevice|//rt-thread/components/drivers/usb/usbhost/class/adk.c|//rt-thread/components/drivers/usb/usbhost/class/hid.c|//rt-thread/components/drivers/usb/usbhost/class/ukbd.c|//rt-thread/components/drivers/usb/usbhost/class/umouse.c|//rt-thread/components/drivers/watchdog|//rt-thread/components/drivers/wlan|//rt-thread/components/fal|//rt-thread/components/libc/compilers/armlibc|//rt-thread/components/libc/compilers/dlib|//rt-thread/components/libc/compilers/musl|//rt-thread/components/libc/cplusplus|//rt-thread/components/libc/posix/io/aio|//rt-thread/components/libc/posix/io/mman|//rt-thread/components/libc/posix/io/stdio|//rt-thread/components/libc/posix/io/termios|//rt-thread/components/libc/posix/signal|//rt-thread/components/lwp|//rt-thread/components/net/at|//rt-thread/components/net/lwip-dhcpd|//rt-thread/components/net/lwip-nat|//rt-thread/components/net/lwip/lwip-1.4.1|//rt-thread/components/net/lwip/lwip-2.0.3|//rt-thread/components/net/lwip/lwip-2.1.2/doc|//rt-thread/components/net/lwip/lwip-2.1.2/src/apps/http|//rt-thread/components/net/lwip/lwip-2.1.2/src/apps/mdns|//rt-thread/components/net/lwip/lwip-2.1.2/src/apps/mqtt|//rt-thread/components/net/lwip/lwip-2.1.2/src/apps/netbiosns|//rt-thread/components/net/lwip/lwip-2.1.2/src/apps/smtp|//rt-thread/components/net/lwip/lwip-2.1.2/src/apps/snmp/snmp_asn1.c|//rt-thread/components/net/lwip/lwip-2.1.2/src/apps/snmp/snmp_core.c|//rt-thread/components/net/lwip/lwip-2.1.2/src/apps/snmp/snmp_mib2.c|//rt-thread/components/net/lwip/lwip-2.1.2/src/apps/snmp/snmp_mib2_icmp.c|//rt-thread/components/net/lwip/lwip-2.1.2/src/apps/snmp/snmp_mib2_interfaces.c|//rt-thread/components/net/lwip/lwip-2.1.2/src/apps/snmp/snmp_mib2_ip.c|//rt-thread/components/net/lwip/lwip-2.1.2/src/apps/snmp/snmp_mib2_snmp.c|//rt-thread/components/net/lwip/lwip-2.1.2/src/apps/snmp/snmp_mib2_system.c|//rt-thread/components/net/lwip/lwip-2.1.2/src/apps/snmp/snmp_mib2_tcp.c|//rt-thread/components/net/lwip/lwip-2.1.2/src/apps/snmp/snmp_mib2_udp.c|//rt-thread/components/net/lwip/lwip-2.1.2/src/apps/snmp/snmp_msg.c|//rt-thread/components/net/lwip/lwip-2.1.2/src/apps/snmp/snmp_netconn.c|//rt-thread/components/net/lwip/lwip-2.1.2/src/apps/snmp/snmp_pbuf_stream.c|//rt-thread/components/net/lwip/lwip-2.1.2/src/apps/snmp/snmp_raw.c|//rt-thread/components/net/lwip/lwip-2.1.2/src/apps/snmp/snmp_scalar.c|//rt-thread/components/net/lwip/lwip-2.1.2/src/apps/snmp/snmp_snmpv2_framework.c|//rt-thread/components/net/lwip/lwip-2.1.2/src/apps/snmp/snmp_snmpv2_usm.c|//rt-thread/components/net/lwip/lwip-2.1.2/src/apps/snmp/snmp_table.c|//rt-thread/components/net/lwip/lwip-2.1.2/src/apps/snmp/snmp_threadsync.c|//rt-thread/components/net/lwip/lwip-2.1.2/src/apps/snmp/snmp_traps.c|//rt-thread/components/net/lwip/lwip-2.1.2/src/apps/snmp/snmpv3.c|//rt-thread/components/net/lwip/lwip-2.1.2/src/apps/sntp|//rt-thread/components/net/lwip/lwip-2.1.2/src/apps/tftp|//rt-thread/components/net/lwip/lwip-2.1.2/src/core/ipv6|//rt-thread/components/net/lwip/lwip-2.1.2/src/core/mem.c|//rt-thread/components/net/lwip/lwip-2.1.2/src/netif/bridgeif.c|//rt-thread/components/net/lwip/lwip-2.1.2/src/netif/bridgeif_fdb.c|//rt-thread/components/net/lwip/lwip-2.1.2/src/netif/lowpan6_ble.c|//rt-thread/components/net/lwip/lwip-2.1.2/src/netif/lowpan6_common.c|//rt-thread/components/net/lwip/lwip-2.1.2/src/netif/ppp|//rt-thread/components/net/lwip/lwip-2.1.2/src/netif/slipif.c|//rt-thread/components/net/lwip/lwip-2.1.2/src/netif/zepif.c|//rt-thread/components/net/lwip/lwip-2.1.2/test|//rt-thread/components/net/lwip/lwip-2.2.0|//rt-thread/components/net/sal/impl/af_inet_at.c|//rt-thread/components/net/sal/impl/proto_mbedtls.c|//rt-thread/components/utilities/rt-link|//rt-thread/components/utilities/ulog/backend/file_be.c|//rt-thread/components/utilities/ulog/syslog|//rt-thread/components/utilities/var_export|//rt-thread/components/utilities/ymodem|//rt-thread/components/utilities/zmodem|//rt-thread/components/vbus|//rt-thread/components/vmm|//rt-thread/libcpu/arm/AT91SAM7S|//rt-thread/libcpu/arm/AT91SAM7X|//rt-thread/libcpu/arm/am335x|//rt-thread/libcpu/arm/arm926|//rt-thread/libcpu/arm/armv6|//rt-thread/libcpu/arm/common/divsi3.S|//rt-thread/libcpu/arm/cortex-a/gicv3.c|//rt-thread/libcpu/arm/cortex-m0|//rt-thread/libcpu/arm/cortex-m23|//rt-thread/libcpu/arm/cortex-m3|//rt-thread/libcpu/arm/cortex-m33|//rt-thread/libcpu/arm/cortex-m4|//rt-thread/libcpu/arm/cortex-m55|//rt-thread/libcpu/arm/cortex-m7|//rt-thread/libcpu/arm/cortex-m85|//rt-thread/libcpu/arm/cortex-r4|//rt-thread/libcpu/arm/dm36x|//rt-thread/libcpu/arm/lpc214x|//rt-thread/libcpu/arm/lpc24xx|//rt-thread/libcpu/arm/realview-a8-vmm|//rt-thread/libcpu/arm/s3c24x0|//rt-thread/libcpu/arm/s3c44b0|//rt-thread/libcpu/arm/sep4020|//rt-thread/libcpu/arm/zynqmp-r5|//rt-thread/src/signal.c|//rt-thread/src/slab.c|//rt-thread/tools" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="" />
           </sourceEntries>
         </configuration>
       </storageModule>
