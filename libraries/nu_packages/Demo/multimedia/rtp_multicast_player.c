@@ -176,6 +176,5 @@ static int rtp_multicast_start(int argc, char **argv)
     return 0;
 }
 
-
 //INIT_APP_EXPORT(rtp_multicast_start);
 MSH_CMD_EXPORT(rtp_multicast_start, start RTP multicast player);

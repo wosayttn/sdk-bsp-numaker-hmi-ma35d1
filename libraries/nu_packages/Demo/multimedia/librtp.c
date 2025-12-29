@@ -150,6 +150,9 @@ struct udp_pcb *rtp_init(uint16_t port, rtp_payload_type_t pt)
         goto exit_rtp_udp_init;
     }
 
+    // Explicitly tell this PCB it is allowed to receive broadcast packets
+    ip_set_option(rtp_pcb, SOF_BROADCAST);
+
     if (udp_bind(rtp_pcb, IP_ADDR_ANY, port) != ERR_OK)
     {
         printf("RTP: udp_bind() failed\n");
