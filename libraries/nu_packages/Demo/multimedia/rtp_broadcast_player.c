@@ -112,5 +112,10 @@ static int rtp_broadcast_start(int argc, char **argv)
     return 0;
 }
 
-//INIT_APP_EXPORT(rtp_broadcast_start);
+static int rtp_broadcast_autostart(void)
+{
+    return rtp_broadcast_start(0, NULL);
+}
+
+//INIT_APP_EXPORT(rtp_broadcast_autostart);
 MSH_CMD_EXPORT(rtp_broadcast_start, start RTP broadcast player);
